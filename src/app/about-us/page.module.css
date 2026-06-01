@@ -1,0 +1,33 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px 30px 20px 30px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.paragraph {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.list {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  padding-left: 10px;
+}
+
+.list li {
+  color: var(--color-link);
+}

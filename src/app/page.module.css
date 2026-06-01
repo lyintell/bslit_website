@@ -1,0 +1,46 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.twoColumn {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 10px 20px 10px;
+  gap: 0;
+}
+
+.column {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--color-border);
+  align-self: stretch;
+  min-height: 200px;
+}
+
+.columnTitle {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.columnImageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+  border: 1px solid #cccccc;
+}
+
+.columnText {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: var(--color-text);
+}

@@ -1,0 +1,43 @@
+:root {
+  --color-navy: #2d4a7a;
+  --color-navy-active: #4a6fa5;
+  --color-text: #333333;
+  --color-link: #3a5a9e;
+  --color-border: #c0b9a8;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --max-width: 750px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  color: var(--color-text);
+  background-color: #ffffff;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-navy);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

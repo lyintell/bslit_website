@@ -1,0 +1,26 @@
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px 20px 20px 20px;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+.paragraph {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
