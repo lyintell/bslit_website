@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import HeroBanner from '@/components/HeroBanner/HeroBanner';
 import styles from './page.module.css';
@@ -39,7 +40,9 @@ export default function HomePage() {
         <div className={styles.divider} />
 
         <div className={styles.column}>
-          <h2 className={styles.columnTitle}>Consulting</h2>
+          <Link href="/consulting" className={styles.columnTitleLink}>
+            <h2 className={styles.columnTitle}>Consulting</h2>
+          </Link>
           <div className={styles.columnImageWrapper}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/people.jpg`}

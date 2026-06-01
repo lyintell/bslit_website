@@ -8,8 +8,9 @@ export default function HeroBanner({ src, alt, tagline }) {
         <Image
           src={src}
           alt={alt}
-          fill
-          style={{ objectFit: 'cover' }}
+          width={1200}
+          height={800}
+          style={{ width: '100%', height: 'auto', display: 'block' }}
           priority
         />
       </div>

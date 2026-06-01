@@ -31,6 +31,17 @@
   text-align: center;
 }
 
+.columnTitleLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.columnTitleLink:hover .columnTitle {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
 .columnImageWrapper {
   display: flex;
   justify-content: center;
