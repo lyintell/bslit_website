@@ -5,14 +5,13 @@
 
 .twoColumn {
   display: flex;
-  align-items: flex-start;
-  padding: 20px 10px;
+  flex-direction: column;
+  padding: 20px 16px;
   gap: 20px;
 }
 
 .addressColumn {
-  flex: 0 0 240px;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 .companyName {
@@ -30,5 +29,24 @@
 
 .formColumn {
   flex: 1;
-  padding: 0 10px;
+  padding: 0 6px;
+}
+
+/* ── Desktop ───────────────────────────────────── */
+@media (min-width: 640px) {
+  .twoColumn {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .addressColumn {
+    flex: 0 0 240px;
+    padding: 0 10px;
+  }
+
+  .formColumn {
+    padding: 0 10px;
+  }
 }

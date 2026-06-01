@@ -5,21 +5,18 @@
 
 .twoColumn {
   display: flex;
-  align-items: flex-start;
-  padding: 30px 10px 20px 10px;
-  gap: 0;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 24px;
 }
 
 .column {
   flex: 1;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .divider {
-  width: 1px;
-  background-color: var(--color-border);
-  align-self: stretch;
-  min-height: 200px;
+  display: none;
 }
 
 .columnTitle {
@@ -54,4 +51,26 @@
   line-height: 1.5;
   text-align: justify;
   color: var(--color-text);
+}
+
+/* ── Desktop ───────────────────────────────────── */
+@media (min-width: 640px) {
+  .twoColumn {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px 10px 20px 10px;
+    gap: 0;
+  }
+
+  .column {
+    padding: 0 16px;
+  }
+
+  .divider {
+    display: block;
+    width: 1px;
+    background-color: var(--color-border);
+    align-self: stretch;
+    min-height: 200px;
+  }
 }

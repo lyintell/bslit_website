@@ -8,6 +8,10 @@
   --max-width: 750px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
