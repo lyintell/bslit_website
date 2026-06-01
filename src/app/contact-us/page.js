@@ -12,7 +12,7 @@ export default function ContactUsPage() {
   return (
     <div className={styles.page}>
       <HeroBanner
-        src="/images/city.jpg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/city.jpg`}
         alt="West African city skyline"
         tagline="The Gate to West Africa"
       />
