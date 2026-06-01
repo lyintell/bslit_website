@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className={styles.page}>
       <HeroBanner
-        src="/images/ship.jpg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/ship.jpg`}
         alt="Cargo ship at port"
         tagline="The Golden Gate to West Africa"
       />
@@ -22,7 +22,7 @@ export default function HomePage() {
           <h2 className={styles.columnTitle}>Global Trade</h2>
           <div className={styles.columnImageWrapper}>
             <Image
-              src="/images/globe.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/globe.jpg`}
               alt="World globe showing trade routes"
               width={210}
               height={145}
@@ -42,7 +42,7 @@ export default function HomePage() {
           <h2 className={styles.columnTitle}>Consulting</h2>
           <div className={styles.columnImageWrapper}>
             <Image
-              src="/images/people.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/people.jpg`}
               alt="Business people consulting"
               width={210}
               height={145}

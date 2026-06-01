@@ -7,7 +7,7 @@ export default function Header() {
       <div className={styles.inner}>
         <div className={styles.logoWrapper}>
           <Image
-            src="/images/logo.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.png`}
             alt="BSLIT Logo"
             width={70}
             height={70}
