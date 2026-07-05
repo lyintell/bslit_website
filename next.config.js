@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/bslit_website',
-  assetPrefix: '/bslit_website',
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/bslit_website',
+    NEXT_PUBLIC_BASE_PATH: '',
   },
   images: {
     unoptimized: true,

@@ -14,3 +14,16 @@ Comme stack je veux utiliser next js.
 Develop un plan plan.md dans le dossier /prompts_and_plan pour attaquer ce projet. Juste le document plan, après on passera à l'execution.
 
 2. Execute le plan de bout en bout
+
+3. Les images ne sont pas sur le site deployé
+
+4.
+- Augmente le font sur toute les pages
+- Sur clique de Consulting (home page), va sur la page consulting
+- L image du ship sur l ecran home est trop zoomé. Montre tout le ship dans l image.
+    Replique le layout de l ecriture sous l image au meme format que l image attachée.
+
+5. 
+- Le siteweb doit etre mobile first. Assure toi que le layout mobile est optimal. Un burger menu pour le navbar sur mobile. Smooth scrolling
+
+I am deploying this using my custom domain (godaddy) and github actions. Ensure the code is correct and all assets, css, js, etc files can be found from the custom website
