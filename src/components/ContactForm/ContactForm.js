@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './ContactForm.module.css';
 
-const WEB3FORMS_ACCESS_KEY = '9f3e14bb-4f9f-4a53-8aad-f94541ad9b1a';
+const WEB3FORMS_ACCESS_KEY = 'a3c3a0c0-f212-4993-b3f3-40f1ed017c55';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -63,10 +63,10 @@ export default function ContactForm() {
       <p className={styles.intro}>
         <strong>Contact us:</strong>
       </p>
-      <p className={styles.subIntro}>For any inquiry send us an email</p>
+      <p className={styles.subIntro}>For any inquiry, please fill out the form below.</p>
 
       {submitted ? (
-        <p className={styles.confirmation}>Thank you! Your message has been sent to info@bslit.com.</p>
+        <p className={styles.confirmation}>Thank you! We have received your message and will get back to you shortly.</p>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
