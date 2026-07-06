@@ -98,3 +98,9 @@
   color: #336633;
   margin-top: 10px;
 }
+
+.errorMessage {
+  font-size: 0.9rem;
+  color: #cc0000;
+  margin-top: 8px;
+}

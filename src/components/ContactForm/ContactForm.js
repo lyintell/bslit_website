@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import styles from './ContactForm.module.css';
 
+const WEB3FORMS_ACCESS_KEY = '9f3e14bb-4f9f-4a53-8aad-f94541ad9b1a';
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,6 +14,8 @@ export default function ContactForm() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
@@ -21,13 +25,37 @@ export default function ContactForm() {
     }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const mailtoLink = `mailto:info@bslit.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    )}`;
-    window.location.href = mailtoLink;
-    setSubmitted(true);
+    setLoading(true);
+    setError(false);
+
+    const body = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      receive_updates: formData.receiveUpdates ? 'Yes' : 'No',
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -38,7 +66,7 @@ export default function ContactForm() {
       <p className={styles.subIntro}>For any inquiry send us an email</p>
 
       {submitted ? (
-        <p className={styles.confirmation}>Thank you! Your email client should open shortly.</p>
+        <p className={styles.confirmation}>Thank you! Your message has been sent to info@bslit.com.</p>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
@@ -115,9 +143,12 @@ export default function ContactForm() {
             />
           </div>
 
-          <button type="submit" className={styles.submitButton}>
-            Submit
+          <button type="submit" className={styles.submitButton} disabled={loading}>
+            {loading ? 'Sending...' : 'Submit'}
           </button>
+          {error && (
+            <p className={styles.errorMessage}>Something went wrong. Please try again.</p>
+          )}
         </form>
       )}
     </div>

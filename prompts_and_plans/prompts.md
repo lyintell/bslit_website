@@ -27,3 +27,6 @@ Develop un plan plan.md dans le dossier /prompts_and_plan pour attaquer ce proje
 - Le siteweb doit etre mobile first. Assure toi que le layout mobile est optimal. Un burger menu pour le navbar sur mobile. Smooth scrolling
 
 I am deploying this using my custom domain (godaddy) and github actions. Ensure the code is correct and all assets, css, js, etc files can be found from the custom website
+
+6. 
+Je veux configurer le contact form - l email doit etre envoyé à info@bslit.com directement. Comment faire cela
